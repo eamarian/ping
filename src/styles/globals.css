@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.container {
+body {
   height: 100vh;
   background-color: #d1d1d1;
   color: "#313131";
@@ -15,7 +15,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .container {
+  body {
     background: #313131;
     color: #d1d1d1;
   }

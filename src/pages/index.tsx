@@ -5,13 +5,13 @@ export default function IndexPage() {
 
   if (!hello.data) {
     return (
-      <div className="container">
+      <div>
         <h1>Loading...</h1>
       </div>
     );
   }
   return (
-    <div className="container">
+    <div>
       {/* the type is define, it can be autocompleted */}
       <h1>{hello.data.greeting}</h1>
     </div>
