@@ -1,15 +1,16 @@
-import { initTRPC } from '@trpc/server';
-import * as trpcNext from '@trpc/server/adapters/next';
-import { z } from 'zod';
+import { initTRPC } from "@trpc/server";
+import * as trpcNext from "@trpc/server/adapters/next";
+import { z } from "zod";
 
 const t = initTRPC.create();
 
 export const appRouter = t.router({
   hello: t.procedure
+    // Try changing the input type and see the typeerrors on the client
     .input(z.object({ text: z.string().nullish() }).nullish())
     .query(({ input }) => {
       return {
-        greeting: `hello ${input?.text ?? 'world'}`,
+        greeting: `hello ${input?.text ?? "world"}`,
       };
     }),
 });
